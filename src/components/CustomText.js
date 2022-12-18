@@ -31,7 +31,7 @@ function CustomText(props) {
             fontWeight: props.fontWeight || "500",
             fontStyle: props.fontStyle,
             textAlign: props.textAlign,
-            fontFamily: props.fontFamily || "inter",
+            fontFamily: props.fontFamily || "regular",
             numberOfLines: props.numberOfLines,
             ellipsizeMode: props.ellipsizeMode,
             marginVertical: verticalScale(props.marginVertical || 0),
@@ -39,7 +39,6 @@ function CustomText(props) {
             textDecorationLine: props.textDecorationLine,
             textDecorationColor: props.textDecorationColor,
             // text-decoration-color: "red";
-            textDecorationLine:props.textDecorationLine, 
           },
           props.textStyle,
         ]}

@@ -20,7 +20,8 @@ import {
 
   
 
-const CustomModal = ({isVisible,
+const CustomModal = ({
+  isVisible,
     onDisable,
     mainMargin,
     marginTop,

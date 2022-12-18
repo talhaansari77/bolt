@@ -4,14 +4,14 @@ import {
   verticalScale,
   moderateScale,
 } from "react-native-size-matters";
+import styled from "react-native-styled-components";
 // import colors from './colors';
-
+import { View } from "react-native";
 const commonStyles = ScaledSheet.create({
   container: {
-    justifyContent: "center",
-    alignItems: "center",
+  
     flexDirection: "column",
-    padding: 20,
+    padding: scale(20),
     flex: 1,
   },
   mainContainer: {
@@ -55,6 +55,16 @@ const commonStyles = ScaledSheet.create({
     justifyContent: "center",
     alignItems: "center",
   }
+});
+
+export const PH10 = styled(View, {
+  paddingHorizontal: scale(10),
+});
+export const PH20 = styled(View, {
+  paddingHorizontal: scale(20),
+});
+export const PH30 = styled(View, {
+  paddingHorizontal: scale(30),
 });
 
 export default commonStyles;

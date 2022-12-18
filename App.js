@@ -1,12 +1,25 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View,LogBox } from 'react-native';
+import RootNavigator from './src/routes';
+import { useFonts } from "expo-font";
+LogBox.ignoreLogs(["VirtualizedLists", "Warning:..."]);
+LogBox.ignoreAllLogs();
 
 export default function App() {
+  const [loaded] = useFonts({
+    regular: require("./assets/Fonts/Roboto-Regular.ttf"),
+    bold: require("./assets/Fonts/Roboto-Bold.ttf"),
+    light: require("./assets/Fonts/Roboto-Light.ttf"),
+    semiBold: require("./assets/Fonts/Roboto-Medium.ttf"),
+
+  });
+
+  if (!loaded) return <View />;
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    //  <Provider store={store}>
+    <RootNavigator />
+    //  </Provider>
   );
 }
 
