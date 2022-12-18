@@ -1,15 +1,20 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import { SafeAreaView, StyleSheet, Text, View } from 'react-native'
+import React ,{useState}from 'react'
 import MapView from 'react-native-maps';
+import LocationModal from './Molecules/LocationModal';
+import DrawerContainer from './Molecules/DrawerContainer';
 
 const Home = () => {
+    const [isVisible,setIsVisible] = useState(true)
   return (
     <View style={styles.container}>
     <MapView style={styles.map} />
+
+    <LocationModal isVisible={isVisible} setIsVisible={setIsVisible}/>
+    <DrawerContainer/>
   </View>
   )
 }
-
 export default Home
 
 const styles = StyleSheet.create({
