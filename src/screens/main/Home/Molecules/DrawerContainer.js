@@ -1,4 +1,4 @@
-import { Platform, StyleSheet, Text, View } from 'react-native'
+import { Platform, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React from 'react'
 import { moderateScale, scale, verticalScale } from 'react-native-size-matters'
 import { colors } from '../../../../utils/Colors'
@@ -6,11 +6,13 @@ import { Feather } from '@expo/vector-icons';
 
 
 
-const DrawerContainer = () => {
+const DrawerContainer = ({navigation}) => {
   return (
-    <View  style={styles.mainContainer}>
+    <TouchableOpacity 
+    onPress={()=>navigation.navigate("MainDrawer")}
+     style={styles.mainContainer}>
 <Feather name="menu" size={moderateScale(20)} color="black" />
-    </View>
+    </TouchableOpacity>
   )
 }
 

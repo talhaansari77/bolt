@@ -33,16 +33,7 @@ const CustomTextInput = ({
 }) => {
   return (
     <View>
-      {withLabel ? (
-        <CustomText
-          label={withLabel}
-          color={colors.gray}
-          fontFamily="regular"
-          fontSize={verticalScale(10)}
-          // marginTop={marginTop}
-          // marginBottom={verticalScale(10)}
-        />
-      ) : null}
+    
       <TouchableOpacity
         onPress={props.onPress}
         disabled={!props.onPress}
@@ -53,185 +44,13 @@ const CustomTextInput = ({
             borderRadius: props.borderRadius || moderateScale(15),
             backgroundColor: props.backgroundColor,
             marginTop: props.marginTop || verticalScale(0),
-            flexDirection: "row",
             borderColor: props.borderColor ,
             alignItems: "center",
             paddingLeft: props.paddingLeft,
           },
         ]}
       >
-        {props.icon ? (
-          <Image
-            style={{
-              width: moderateScale(20),
-              height: verticalScale(15),
-              tintColor: colors.gray,
-            }}
-            resizeMode="contain"
-            source={props.icon}
-          />
-        ) : null}
-
-        {props.search ? (
-          <View style={{ display: "flex", flexDirection: "row" }}>
-            <View
-              style={{
-                marginLeft: 10,
-                alignSelf: "center",
-              }}
-            >
-              <Feather
-                name={"search"}
-                color={colors.lightWhite}
-                size={27}
-                // onPress={() =>
-                //   navigation.navigate("SettingStack", { screen: "SearchScreen" })
-                // }
-              />
-            </View>
-            {
-              props.line?(
-                <View
-                style={{
-                  backgroundColor: colors.lightWhite,
-                  height: verticalScale(36),
-                  width: scale(1.5),
-                  marginLeft: 10,
-                }}
-              ></View>
-
-              ):<></>
-            }
-         
-          </View>
-        ) : props.calendar ? (
-          <View style={{ display: "flex", flexDirection: "row" }}>
-            <View
-              style={{
-                marginLeft: 10,
-                alignSelf: "center",
-              }}
-            >
-              <Feather
-                name={"calendar"}
-                color={colors.lightWhite}
-                size={27}
-                // onPress={() =>
-                //   navigation.navigate("SettingStack", { screen: "SearchScreen" })
-                // }
-              />
-            </View>
-            <View
-              style={{
-                backgroundColor: colors.lightWhite,
-                height: verticalScale(36),
-                width: scale(2),
-                marginLeft: 10,
-              }}
-            ></View>
-          </View>
-        ) : null}
-
-        {props.playCircle ? (
-          <View style={{ display: "flex", flexDirection: "row" }}>
-            <View
-              style={{
-                marginLeft: 10,
-                alignSelf: "center",
-              }}
-            >
-              <Feather
-                name={"play-circle"}
-                color={colors.lightWhite}
-                size={27}
-                // onPress={() =>
-                //   navigation.navigate("SettingStack", { screen: "SearchScreen" })
-                // }
-              />
-            </View>
-            <View
-              style={{
-                backgroundColor: colors.lightWhite,
-                height: verticalScale(36),
-                width: scale(2),
-                marginLeft: 10,
-              }}
-            ></View>
-          </View>
-        ) : null}
-
-        {props.tv ? (
-          <View style={{ display: "flex", flexDirection: "row" }}>
-            <View
-              style={{
-                marginLeft: 10,
-                alignSelf: "center",
-              }}
-            >
-              <Feather
-                name={"tv"}
-                color={colors.lightWhite}
-                size={27}
-                // onPress={() =>
-                //   navigation.navigate("SettingStack", { screen: "SearchScreen" })
-                // }
-              />
-            </View>
-            <View
-              style={{
-                backgroundColor: colors.lightWhite,
-                height: verticalScale(36),
-                width: scale(2),
-                marginLeft: 10,
-              }}
-            ></View>
-          </View>
-        ) : null}
-
-        {props.calendarClock ? (
-          <View style={{ display: "flex", flexDirection: "row" }}>
-            <View
-              style={{
-                marginLeft: 10,
-                alignSelf: "center",
-              }}
-            >
-              <MaterialCommunityIcons
-                name={"calendar-clock"}
-                color={colors.lightWhite}
-                size={27}
-                // onPress={() =>
-                //   navigation.navigate("SettingStack", { screen: "SearchScreen" })
-                // }
-              />
-            </View>
-            <View
-              style={{
-                backgroundColor: colors.lightWhite,
-                height: verticalScale(36),
-                width: scale(2),
-                marginLeft: 10,
-              }}
-            ></View>
-          </View>
-        ) : null}
-
-        {/* {props.lineargradient ? (
-          <View>
-            <LinearGradient
-              activeOpacity={0.6}
-              colors={[colors.primary, colors.lightBlack]}
-              padding={0.6}
-              paddingLeft={2.9}
-              paddingRight={2.9}
-              borderRadius={10}
-              // flexDirection={"row"}
-              start={{ x: 0, y: 0.5 }}
-              end={{ x: 1, y: 0.5 }}
-            ></LinearGradient>
-          </View>
-        ) : null} */}
-
+  
         <TextInput
           style={[
             {
@@ -254,55 +73,11 @@ const CustomTextInput = ({
           placeholderTextColor={props.placeholderTextColor}
           secureTextEntry={props.secureTextEntry}
         />
-        {password ? (
-          <TouchableOpacity
-            activeOpacity={0.6}
-            onPress={() => {
-              setEyeClick(!eyeClick);
-            }}
-          >
-            {eyeClick ? (
-              <Ionicons
-                name="eye-off"
-                size={moderateScale(22)}
-                style={{ opacity: 0.5 }}
-                color={colors.primary}
-              />
-            ) : (
-              <Ionicons
-                name="eye"
-                size={moderateScale(22)}
-                style={{ opacity: 0.5 }}
-                color={colors.primary}
-              />
-            )}
-            {/* <Image style={styles.icon} source={eyeClick ? images.eye:images.hiddenEye } /> */}
-          </TouchableOpacity>
-        ) : null}
+      
 
-        {props.mic ? (
-          <View style={{ marginRight: 10 }}>
-            <Feather
-              name={"mic"}
-              color={colors.lightWhite}
-              height={50}
-              size={27}
-              alignSlef={"end"}
-            />
-          </View>
-        ) : null}
+        
 
-        {props.downArrow ? (
-          <View style={{ marginRight: 10 }}>
-            <SimpleLineIcons
-              name={"arrow-down"}
-              color={colors.lightWhite}
-              // height={50}
-              size={15}
-              alignSlef={"end"}
-            />
-          </View>
-        ) : null}
+        
       </TouchableOpacity>
       {error ? (
         <CustomText

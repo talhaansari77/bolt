@@ -7,12 +7,16 @@ import {
 import styled from "react-native-styled-components";
 // import colors from './colors';
 import { View } from "react-native";
+import { colors } from "./Colors";
 const commonStyles = ScaledSheet.create({
   container: {
   
     flexDirection: "column",
     padding: scale(20),
     flex: 1,
+  },
+  container1:{
+    flex: 1, backgroundColor: colors.white 
   },
   mainContainer: {
     flex: 1,
@@ -39,9 +43,8 @@ const commonStyles = ScaledSheet.create({
     flexDirection: "row",
   },
   imgContainer: {
-    width: moderateScale(25),
-    height: verticalScale(25),
-    marginBottom: verticalScale(10),
+    width: moderateScale(20),
+    height: verticalScale(20),
   },
   img: {
     width: "100%",

@@ -4,6 +4,7 @@ import {createStackNavigator} from '@react-navigation/stack';
 import {NavigationContainer, DefaultTheme} from '@react-navigation/native';
 import AuthStack from './authStack';
 import MainStack from './mainStack';
+import MainDrawer from './MainDrawer/MainDrawer';
 const Stack=createStackNavigator()
 
 const RootNavigator = () => {

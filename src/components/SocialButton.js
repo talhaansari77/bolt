@@ -6,22 +6,23 @@ import { colors } from '../utils/Colors';
 import { Spacer } from './Spacer';
 import {moderateScale} from 'react-native-size-matters';
 
-const SocialButton = ({label, icon}) => (
+const SocialButton = ({label, icon,borderRadius,borderWidth,backgroundColor,textColor,height,fontFamily}) => (
   <TouchableOpacity
     activeOpacity={0.6}
     style={{
-      backgroundColor: colors.white,
+      backgroundColor:  backgroundColor||  colors.white,
       width: '100%',
       flexDirection: 'row',
       alignItems: 'center',
-      borderWidth:1,
+      borderWidth:borderWidth || 1,
       borderColor:colors.gray1,
       justifyContent: 'center',
-      borderRadius: moderateScale(50),  
+      borderRadius:  borderRadius|| moderateScale(50),  
       alignSelf: 'center',
       padding: moderateScale(10),
+      height:height
     }}>
-    <View style={{flex: 3, flexDirection: 'row'}}>
+    <View style={{flex: 2, flexDirection: 'row'}}>
       <Spacer width={12} />
       <Image
         source={icon}
@@ -31,8 +32,8 @@ const SocialButton = ({label, icon}) => (
     </View>
     <View style={{flex: 7}}>
       <CustomText
-        fontFamily={"regular"}
-        color={colors.black}
+        fontFamily={ fontFamily|| "regular"}
+        color={ textColor|| colors.black}
         fontSize={14}
         label={label}
       />

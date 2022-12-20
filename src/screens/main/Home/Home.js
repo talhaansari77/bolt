@@ -4,14 +4,14 @@ import MapView from 'react-native-maps';
 import LocationModal from './Molecules/LocationModal';
 import DrawerContainer from './Molecules/DrawerContainer';
 
-const Home = () => {
+const Home = ({navigation}) => {
     const [isVisible,setIsVisible] = useState(true)
   return (
     <View style={styles.container}>
     <MapView style={styles.map} />
 
     <LocationModal isVisible={isVisible} setIsVisible={setIsVisible}/>
-    <DrawerContainer/>
+    <DrawerContainer navigation={navigation}/>
   </View>
   )
 }

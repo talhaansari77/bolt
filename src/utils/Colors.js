@@ -10,5 +10,6 @@ export const colors = {
   blue: "blue",
   lightGray: "#e9ecef",
   halfGray: "#9F9F9F",
-  lightBlack:"#6c757d"
+  lightBlack:"#6c757d",
+  lightBlack1:"#495057"
 };
