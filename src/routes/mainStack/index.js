@@ -20,7 +20,7 @@ const MainStack = () => {
       <Stack.Navigator
       screenOptions={{headerShown:false}}
       >
-          <Stack.Screen name="Home" component={Home}/>
+          {/* <Stack.Screen name="Home" component={Home}/> */}
         <Stack.Screen name="MainDrawer" component={MainDrawer}/> 
         <Stack.Screen name="Profile" component={ProfileScreen}/> 
         <Stack.Screen name="EditProfile" component={EditProfile}/> 

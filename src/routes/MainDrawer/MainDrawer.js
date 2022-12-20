@@ -12,6 +12,7 @@ import SupportsScreen from "../../screens/main/Supports/SupportsScreen";
 import MyRidesScreen from "../../screens/main/MyRides/MyRidesScreen";
 import { moderateScale, scale, verticalScale } from "react-native-size-matters";
 import icons from "../../../assets/Icons";
+import Home from "../../screens/main/Home/Home";
 
 const Drawer = createDrawerNavigator();
 
@@ -31,6 +32,23 @@ const MainDrawer = () => {
       }}
       initialRouteName={"Home"}
     >
+      <Drawer.Screen
+        options={{
+          drawerItemStyle:{display:"none"},
+          drawerIcon: ({ color }) => (
+            <Image
+              source={icons.payment}
+              style={{
+                width: scale(20),
+                height: verticalScale(20),
+                tintColor: "#3f3f3f",
+              }}
+            />
+          ),
+        }}
+        name="Home"
+        component={Home}
+      />
       <Drawer.Screen
         options={{
           drawerIcon: ({ color }) => (

@@ -1,26 +1,23 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
-import {createStackNavigator} from '@react-navigation/stack';
-import {NavigationContainer, DefaultTheme} from '@react-navigation/native';
-import AuthStack from './authStack';
-import MainStack from './mainStack';
-import MainDrawer from './MainDrawer/MainDrawer';
-const Stack=createStackNavigator()
+import { StyleSheet, Text, View } from "react-native";
+import React from "react";
+import { createStackNavigator } from "@react-navigation/stack";
+import { NavigationContainer, DefaultTheme } from "@react-navigation/native";
+import AuthStack from "./authStack";
+import MainStack from "./mainStack";
+import MainDrawer from "./MainDrawer/MainDrawer";
+const Stack = createStackNavigator();
 
 const RootNavigator = () => {
   return (
-      <NavigationContainer>
-           <Stack.Navigator screenOptions={{headerShown: false}}>
-        <Stack.Screen name="MainStack" component={MainStack} />
+    <NavigationContainer>
+      <Stack.Navigator screenOptions={{ headerShown: false }}>
         <Stack.Screen name="AuthStack" component={AuthStack} />
+        <Stack.Screen name="MainStack" component={MainStack} />
       </Stack.Navigator>
+    </NavigationContainer>
+  );
+};
 
+export default RootNavigator;
 
-      </NavigationContainer>
-  
-  )
-}
-
-export default RootNavigator
-
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({});
