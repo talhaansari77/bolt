@@ -13,6 +13,7 @@ import ProfileScreen from '../../screens/main/Home/Profile/ProfileScreen'
 import EditProfile from '../../screens/main/Home/Profile/EditProfile/EditProfile'
 import PromoCode from '../../screens/main/Promotions/PromoCode/PromoCode'
 import EmailReceipts from '../../screens/main/Home/Profile/EmailReceipts/EmailReceipts'
+import InboxScreen from '../../screens/main/Supports/Inbox/InboxScreen'
 
 
 const Stack=createStackNavigator()
@@ -25,6 +26,7 @@ const MainStack = () => {
           {/* <Stack.Screen name="Home" component={Home}/> */}
         {/* <Stack.Screen name="SupportsScreen" component={SupportsScreen}/>  */}
         <Stack.Screen name="MainDrawer" component={MainDrawer}/> 
+        <Stack.Screen name="InboxScreen" component={InboxScreen}/> 
         <Stack.Screen name="Profile" component={ProfileScreen}/> 
         <Stack.Screen name="EditProfile" component={EditProfile}/> 
         <Stack.Screen name="PromoCode" component={PromoCode}/> 
