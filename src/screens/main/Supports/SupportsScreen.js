@@ -8,16 +8,17 @@ import { Spacer } from "../../../components/Spacer";
 import { useNavigation } from '@react-navigation/native';
 
 
+
 const SupportsScreen = () => {
-  const navigation = useNavigation
+  const navigation = useNavigation()
   return (
     <View>
       <SupportHeader navigation={navigation} />
       <SafeAreaView>
         <View style={{ width: "auto", paddingHorizontal: 18 }}>
-          <SupportBody />
+          <SupportBody navigation={navigation}  />
           <Spacer height={25} />
-          <SupportBottom />
+          <SupportBottom navigation={navigation} />
         </View>
       </SafeAreaView>
     </View>

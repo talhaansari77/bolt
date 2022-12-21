@@ -4,6 +4,7 @@ import { Entypo } from "@expo/vector-icons";
 import CustomText from "../../../../components/CustomText";
 import { Spacer } from "../../../../components/Spacer";
 
+
 const SupportHeader = ({navigation}) => {
   return (
     <View
@@ -31,7 +32,7 @@ const SupportHeader = ({navigation}) => {
           paddingHorizontal: 10,
         }}
       >
-        <TouchableOpacity activeOpacity={0.6} onPress={() => navigation.navigate("MainStack",{screen:"MainDrawer"})} >
+        <TouchableOpacity activeOpacity={0.6} onPress={() => navigation.goBack()} >
         <Entypo name="cross" size={30} color="black" />
         </TouchableOpacity>
         <Spacer width={25} />

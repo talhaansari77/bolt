@@ -22,6 +22,7 @@ const icons = {
   logout:require("./logout.png"),
   facebookwhite:require("./facebookwhite.png"),
   car:require("./car.png"),
+  chat:require("./chat.png"),
 
 
 

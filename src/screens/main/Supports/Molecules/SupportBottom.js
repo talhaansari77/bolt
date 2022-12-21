@@ -6,15 +6,17 @@ import { colors } from "../../../../utils/Colors";
 import { MaterialIcons } from "@expo/vector-icons";
 import { AntDesign } from "@expo/vector-icons";
 
-const SupportBottom = () => {
+const SupportBottom = ({ navigation }) => {
   const SupportList = [
     {
       id: 1,
       name: "About Bolt",
+      onPress: () => navigation.navigate("AboutSupport"),
     },
     {
       id: 2,
       name: "App and features",
+      onPress: () => navigation.navigate("AppsAndFeatures"),
     },
     {
       id: 3,
@@ -44,7 +46,7 @@ const SupportBottom = () => {
 
         {SupportList.map((item, index) => (
           <View>
-            <TouchableOpacity activeOpacity={0.6}>
+            <TouchableOpacity onPress={item.onPress} activeOpacity={0.6}>
               <View
                 style={{
                   display: "flex",

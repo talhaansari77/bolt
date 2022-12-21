@@ -6,7 +6,7 @@ import { MaterialIcons } from "@expo/vector-icons";
 import { colors } from "../../../../utils/Colors";
 import { AntDesign } from "@expo/vector-icons";
 
-const SupportBody = () => {
+const SupportBody = ({navigation}) => {
   return (
     <View>
       <View>
@@ -24,7 +24,7 @@ const SupportBody = () => {
         />
       </View>
       <Spacer height={15} />
-      <TouchableOpacity activeOpacity={0.6}>
+      <TouchableOpacity activeOpacity={0.6} onPress={()=> navigation.navigate("InboxScreen")}>
         <View
           style={{
             display: "flex",
