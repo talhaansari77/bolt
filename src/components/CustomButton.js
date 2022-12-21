@@ -39,6 +39,9 @@ function CustomButton({
   fontSize,
   alignSelf,
   paddingHorizontal,
+  bottom,
+  position
+
 }) {
   return (
     <TouchableOpacity
@@ -61,6 +64,8 @@ function CustomButton({
           marginBottom: marginBottom,
           marginHorizontal: marginHorizontal,
           paddingHorizontal: paddingHorizontal,
+          bottom:bottom,
+          position:position
         },
       ]}
       onPress={onPress}

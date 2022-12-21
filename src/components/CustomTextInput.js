@@ -16,12 +16,12 @@ import {
 // import { colors } from "../utils/Colors";
 import CustomText from "./CustomText";
 import { Ionicons } from "@expo/vector-icons";
-import { colors } from "../Utils/Colors";
 import Feather from "react-native-vector-icons/Feather";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import SimpleLineIcons from "react-native-vector-icons/SimpleLineIcons";
 import { LinearGradient } from "expo-linear-gradient";
 import { Divider } from "react-native-elements";
+import { colors } from "../utils/Colors";
 
 const CustomTextInput = ({
   eyeClick,
@@ -29,6 +29,8 @@ const CustomTextInput = ({
   setEyeClick,
   error,
   withLabel,
+  inputTextColor,
+  fontFamily,
   ...props
 }) => {
   return (
@@ -59,8 +61,8 @@ const CustomTextInput = ({
               marginLeft: props.inputLeftMargin || 10,
               paddingRight: props.paddingRight || 10,
               paddingHorizontal: props.paddingHorizontal,
-              fontFamily: "bold",
-              color:colors.white,
+              fontFamily: fontFamily || "bold",
+              color: inputTextColor || colors.white,
               fontSize: verticalScale(13),
             },
           ]}

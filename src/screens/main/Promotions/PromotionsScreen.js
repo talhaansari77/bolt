@@ -17,10 +17,10 @@ const PromotionsScreen = ({ navigation }) => {
         <Spacer height={10} />
 
         <Spacer height={10} />
-        <PromotionContainer />
-        <PercentageSpacer height={"30%"}/>
+        <PromotionContainer navigation={navigation} />
+        <PercentageSpacer height={"30%"} />
 
-        <PromotionAppearCon/>
+        <PromotionAppearCon />
       </View>
     </SafeAreaView>
   );

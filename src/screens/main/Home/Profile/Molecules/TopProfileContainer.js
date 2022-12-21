@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import React from "react";
 import ProfileImg from "../../../../../components/ProfileImg";
 import CustomText from "../../../../../components/CustomText";
@@ -8,8 +8,10 @@ import CustomButton from "../../../../../components/CustomButton";
 import { moderateScale, verticalScale } from "react-native-size-matters";
 import { Fontisto } from "@expo/vector-icons";
 import LineSeparator from "../../../../../components/LineSeparator";
+import { useNavigation } from "@react-navigation/native";
 
 const TopProfileContainer = () => {
+  const navigation = useNavigation();
   return (
     <View>
       <View style={{ alignItems: "center" }}>
@@ -33,6 +35,7 @@ const TopProfileContainer = () => {
         />
         <Spacer height={20} />
       </View>
+      <TouchableOpacity activeOpacity={0.6} onPress={()=> navigation.navigate("EmailReceipts")} >
       <View style={styles.mailContainer}>
         <View style={{ flexDirection: "row", alignItems: "center" }}>
           <Fontisto
@@ -57,6 +60,7 @@ const TopProfileContainer = () => {
           height={verticalScale(18)}
         />
       </View>
+      </TouchableOpacity>
       <Spacer height={20}/>
 
       <LineSeparator height={6}/>

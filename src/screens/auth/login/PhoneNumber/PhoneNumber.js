@@ -21,7 +21,8 @@ const PhoneNumber = ({ navigation }) => {
         <PercentageSpacer height={"60%"}/>
 
         <CustomButton 
-        onPress={()=> navigation.navigate("MainStack",{screen:"MainDrawer"})}
+        onPress={()=> navigation.navigate("PhoneOtp")}
+        // onPress={()=> navigation.navigate("MainStack",{screen:"MainDrawer"})}
         title="Continue"  borderRadius={50}/>
       </View>
     </SafeAreaView>

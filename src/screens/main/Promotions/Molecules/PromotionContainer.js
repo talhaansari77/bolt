@@ -7,7 +7,7 @@ import icons from "../../../../../assets/Icons";
 import { Spacer } from "../../../../components/Spacer";
 import LineSeparator from "../../../../components/LineSeparator";
 
-const PromotionContainer = () => {
+const PromotionContainer = ({ navigation }) => {
   return (
     <View>
       <View style={styles.mainContainer}>
@@ -28,6 +28,7 @@ const PromotionContainer = () => {
           fontFamily={"semiBold"}
           color={colors.lightBlack1}
           fontSize={13}
+          onPress={() => navigation.navigate("PromoCode")}
         />
       </View>
       <Spacer height={15} />

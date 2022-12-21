@@ -20,7 +20,7 @@ const OtpLoadingModal = ({ isVisible, setIsVisible }) => {
 
       <Lottie
         style={{ height: 100, alignSelf: "center" }}
-        source={require("../../../../../assets/Loader/apploading.json")}
+        // source={require("../../../../../assets/Loader/apploading.json")}
         autoPlay
         // speed={1.5}
       />
