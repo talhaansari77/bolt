@@ -86,6 +86,7 @@ const styles = StyleSheet.create({
     borderWidth: 0,
     borderRadius: scale(5),
     backgroundColor: colors.lightGray,
+    color:colors.black
   },
   highLighted: {
     borderColor: colors.primary,
