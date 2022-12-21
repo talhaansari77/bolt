@@ -23,11 +23,12 @@ const MainStack = () => {
       screenOptions={{headerShown:false}}
       >
           {/* <Stack.Screen name="Home" component={Home}/> */}
-        <Stack.Screen name="EmailReceipts" component={EmailReceipts}/> 
+        {/* <Stack.Screen name="SupportsScreen" component={SupportsScreen}/>  */}
         <Stack.Screen name="MainDrawer" component={MainDrawer}/> 
         <Stack.Screen name="Profile" component={ProfileScreen}/> 
         <Stack.Screen name="EditProfile" component={EditProfile}/> 
         <Stack.Screen name="PromoCode" component={PromoCode}/> 
+        <Stack.Screen name="EmailReceipts" component={EmailReceipts}/> 
 
 
 

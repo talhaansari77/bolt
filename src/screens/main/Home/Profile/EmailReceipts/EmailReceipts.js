@@ -7,8 +7,11 @@ import { colors } from "../../../../../utils/Colors";
 import CustomTextInput from "../../../../../components/CustomTextInput";
 import ReceipteHeader from "./Molecules/ReceipteHeader";
 import ReceipteFooter from "./Molecules/ReceipteFooter";
+import { useNavigation } from "@react-navigation/native";
 
-const EmailReceipts = ({ navigation }) => {
+
+const EmailReceipts = () => {
+    const navigation = useNavigation()
   return (
     <SafeAreaView>
       <Spacer height={Platform.OS == "ios" ? 8 : 30} />
