@@ -79,7 +79,7 @@ const OtpMainContainer = ({ navigation }) => {
           fontSize={13}
           marginTop={5}
           color={colors.black}
-          fontFamily={"medium"}
+          fontFamily={"semiBold"}
         />
       </View>
       <OtpLoadingModal isVisible={isVisible} setIsVisible={setIsVisible} />

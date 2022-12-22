@@ -63,7 +63,7 @@ const LoginMainContainer = ({navigation}) => {
           marginRight={7}
           fontSize={13}
           color={colors.halfGray}
-          fontFamily={"medium"}
+          fontFamily={"semiBold"}
         />
         <SepratorLine height={0.7} width={"44%"} />
       </View>

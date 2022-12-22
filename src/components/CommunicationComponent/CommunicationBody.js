@@ -36,7 +36,7 @@ const CommunicationBody = (props) => {
               thumbOffStyle={{ backgroundColor: colors.gray }}
               trackOnStyle={{backgroundColor: colors.lightOrange}}
               // thumbOffStyle={colors.primary}
-              size="medium"
+              size="semiBold"
               onToggle={() => {
                 setisOn(!isOn);
               }}

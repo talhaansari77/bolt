@@ -51,7 +51,7 @@ const YourRoutes = ({ navigation }) => {
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: colors.white }}>
       <View style={commonStyles.container}>
-      <PercentageSpacer height={Platform.OS=="android"?"5%":0}/>
+        <PercentageSpacer height={Platform.OS == "android" ? "5%" : 0} />
 
         <ProfileHeader
           label={"Home"}
@@ -62,10 +62,13 @@ const YourRoutes = ({ navigation }) => {
         />
         <Spacer height={20} />
 
-        {routsData.map((item) => {
+        {routsData.map((item, index) => {
           return (
             <>
-              <View style={{ flexDirection: "row", alignItems: "center" }}>
+              <View
+                key={index}
+                style={{ flexDirection: "row", alignItems: "center" }}
+              >
                 <CustomTextInput
                   onPress={() => setCheck(item.id)}
                   leftIcon={item.id == check ? icons.yourdes : null}
