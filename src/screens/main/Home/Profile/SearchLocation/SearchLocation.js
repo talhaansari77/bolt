@@ -14,7 +14,7 @@ const SearchLocation = ({navigation,route}) => {
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: colors.white }}>
     <View style={commonStyles.container}>
-    <PercentageSpacer height={Platform.OS=="android"?"5%":0}/>
+    {/* <PercentageSpacer height={Platform.OS=="android"?"5%":0}/> */}
 
         <ProfileHeader label={route?.params?.location?"Work" :"Home"}leftIcon={icons.cross}
         navigation={navigation}

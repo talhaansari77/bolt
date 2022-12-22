@@ -27,7 +27,6 @@ const OtpMainContainer = ({ navigation }) => {
           color={colors.black}
           fontFamily={"bold"}
         />
-
         <CustomText
           label="Edit phone number"
           fontSize={13}
@@ -52,6 +51,7 @@ const OtpMainContainer = ({ navigation }) => {
           // }}
           codeInputFieldStyle={styles.underlineStyleBase}
           onCodeFilled={(code) => {
+
             setIsVisible(true);
             // navigation.navigate("MainDrawer");
 
@@ -60,6 +60,14 @@ const OtpMainContainer = ({ navigation }) => {
               setIsVisible(false);
               navigation.navigate("MainDrawer");
             }, 2000);
+
+            // setIsVisible(true);
+            navigation.navigate("MainDrawer");
+            // setTimeout(() => {
+            //   setIsVisible(false);
+            //   navigation.navigate("MainDrawer");
+            // }, 2000);
+
             console.log(`Code is ${code}, you are good to go!`);
           }}
         />

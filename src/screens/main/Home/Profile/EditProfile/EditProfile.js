@@ -15,7 +15,7 @@ const EditProfile = ({navigation}) => {
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: colors.white }}>
       <View style={commonStyles.container}>
-      <PercentageSpacer height={Platform.OS=="android"?"5%":0}/>
+      {/* <PercentageSpacer height={Platform.OS=="android"?"5%":0}/> */}
 
         <ProfileHeader label="Edit Profile" navigation={navigation} />
         <Spacer height={40} />
