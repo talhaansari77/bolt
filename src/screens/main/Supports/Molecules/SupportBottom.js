@@ -21,14 +21,17 @@ const SupportBottom = ({ navigation }) => {
     {
       id: 3,
       name: "Account and data",
+      onPress: () => navigation.navigate("AccountAndData"),
     },
     {
       id: 4,
       name: "Payments and pricing",
+      onPress: () => navigation.navigate("PaymentAndPricing"),
     },
     {
       id: 5,
       name: "Using Bolt",
+      onPress: () => navigation.navigate("UsingBolt"),
     },
   ];
 
