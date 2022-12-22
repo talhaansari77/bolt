@@ -13,12 +13,12 @@ const OtpLoadingModal = ({ isVisible, setIsVisible }) => {
     <CustomModal
       isVisible={isVisible}
       onDisable={() => setIsVisible(!isVisible)}
-      height={verticalScale(100)}
+      height={verticalScale(120)}
       width={"80%"}
       borderRadius={10}
     >
-      <PercentageSpacer height={"40%"}/>
-      {/* <ActivityIndicator size={"large"} color={colors.primary}/> */}
+      <PercentageSpacer height={"20%"}/>
+      <ActivityIndicator size={"large"} color={colors.primary}/>
 
       {/* <Lottie
         style={{ height: 100, alignSelf: "center" }}
@@ -26,7 +26,7 @@ const OtpLoadingModal = ({ isVisible, setIsVisible }) => {
         autoPlay
         // speed={1.5}
       /> */}
-            {/* <Spacer height={20} /> */}
+            <Spacer height={20} />
 
       <CustomText
         label="Verifying code..."
