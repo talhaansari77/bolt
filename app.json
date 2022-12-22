@@ -6,6 +6,9 @@
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
+    "googleApiKeys": {
+      "android": "AIzaSyC7Wga6Vt3S_qLmTvGmDPcZFuCVUzna_Yw"
+    },
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "cover",

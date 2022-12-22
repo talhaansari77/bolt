@@ -28,3 +28,7 @@ const Loader = ({ loading, file }) => {
 };
 
 export default Loader;
+
+// "googleApiKeys": {
+//   "android": "AIzaSyC7Wga6Vt3S_qLmTvGmDPcZFuCVUzna_Yw"
+// },

@@ -4,12 +4,15 @@ import MapView from "react-native-maps";
 import LocationModal from "./Molecules/LocationModal";
 import DrawerContainer from "./Molecules/DrawerContainer";
 import WhereSearch from "./Molecules/WhereSearch";
+import {PROVIDER_GOOGLE} from "react-native-maps";
+
 
 const Home = ({ navigation }) => {
   const [isVisible, setIsVisible] = useState(true);
   return (
     <View style={styles.container}>
       <MapView
+      provider={PROVIDER_GOOGLE}
         style={styles.map}
         initialRegion={{
           latitude: 37.78825,
@@ -18,7 +21,7 @@ const Home = ({ navigation }) => {
           longitudeDelta: 0.0421,
         }}
       />
-
+        
       <LocationModal isVisible={isVisible} setIsVisible={setIsVisible} />
       <DrawerContainer navigation={navigation} />
       <WhereSearch navigation={navigation}/>
