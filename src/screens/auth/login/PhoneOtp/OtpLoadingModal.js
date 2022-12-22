@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, Modal,ActivityIndicator } from "react-native";
+import { StyleSheet, Text, View, Modal, ActivityIndicator } from "react-native";
 import React from "react";
 import CustomModal from "../../../../components/CustomModal";
 import { colors } from "../../../../utils/Colors";
@@ -17,8 +17,8 @@ const OtpLoadingModal = ({ isVisible, setIsVisible }) => {
       width={"80%"}
       borderRadius={10}
     >
-      <PercentageSpacer height={"20%"}/>
-      <ActivityIndicator size={"large"} color={colors.primary}/>
+      <PercentageSpacer height={"20%"} />
+      <ActivityIndicator size={"large"} color={colors.primary} />
 
       {/* <Lottie
         style={{ height: 100, alignSelf: "center" }}
@@ -26,7 +26,7 @@ const OtpLoadingModal = ({ isVisible, setIsVisible }) => {
         autoPlay
         // speed={1.5}
       /> */}
-            <Spacer height={20} />
+      <Spacer height={20} />
 
       <CustomText
         label="Verifying code..."

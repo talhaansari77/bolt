@@ -52,14 +52,14 @@ const OtpMainContainer = ({ navigation }) => {
           // }}
           codeInputFieldStyle={styles.underlineStyleBase}
           onCodeFilled={(code) => {
-            // setIsVisible(true);
-            navigation.navigate("MainDrawer");
+            setIsVisible(true);
+            // navigation.navigate("MainDrawer");
 
 
-            // setTimeout(() => {
-            //   setIsVisible(false);
-            //   navigation.navigate("MainDrawer");
-            // }, 2000);
+            setTimeout(() => {
+              setIsVisible(false);
+              navigation.navigate("MainDrawer");
+            }, 2000);
             console.log(`Code is ${code}, you are good to go!`);
           }}
         />

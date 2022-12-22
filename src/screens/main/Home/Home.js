@@ -1,17 +1,17 @@
 import { SafeAreaView, StyleSheet, Text, View } from "react-native";
 import React, { useState } from "react";
-import MapView from "react-native-maps";
+// import MapView from "react-native-maps";
 import LocationModal from "./Molecules/LocationModal";
 import DrawerContainer from "./Molecules/DrawerContainer";
 import WhereSearch from "./Molecules/WhereSearch";
-import {PROVIDER_GOOGLE} from "react-native-maps";
+// import {PROVIDER_GOOGLE} from "react-native-maps";
 
 
 const Home = ({ navigation }) => {
   const [isVisible, setIsVisible] = useState(true);
   return (
     <View style={styles.container}>
-      <MapView
+      {/* <MapView
       provider={PROVIDER_GOOGLE}
         style={styles.map}
         initialRegion={{
@@ -20,7 +20,7 @@ const Home = ({ navigation }) => {
           latitudeDelta: 0.0922,
           longitudeDelta: 0.0421,
         }}
-      />
+      /> */}
         
       <LocationModal isVisible={isVisible} setIsVisible={setIsVisible} />
       <DrawerContainer navigation={navigation} />
