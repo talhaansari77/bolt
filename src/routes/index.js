@@ -13,10 +13,13 @@ const RootNavigator = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator screenOptions={{ headerShown: false }}>
-      <Stack.Screen name="AuthStack" component={AuthStack} />
-        <Stack.Screen name="MainDrawer" component={MainDrawer} />
+      <Stack.Screen name="MainDrawer" component={MainDrawer} />
         <Stack.Screen name="YourRoutes" component={YourRoutes}/>
-        <Stack.Screen name="ProfileStack" component={ProfileStack}/>
+      <Stack.Screen name="AuthStack" component={AuthStack} />
+      <Stack.Screen name="ProfileStack" component={ProfileStack}/>
+
+
+
 
 
 
