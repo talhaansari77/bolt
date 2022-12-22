@@ -42,25 +42,26 @@ const OtpMainContainer = ({ navigation }) => {
           pinCount={4}
           codeInputHighlightStyle={styles.highLighted}
           autoFocusOnLoad
-          onCodeChanged={(data)=>{
-            setIsVisible(true);
-
-            setTimeout(() => {
-              setIsVisible(false);
-              navigation.navigate("MainDrawer");
-            }, 2000);
-            console.log(`Code is ${data}, you are good to go!`);
-          }}
-          codeInputFieldStyle={styles.underlineStyleBase}
-          // onCodeFilled={(code) => {
+          // onCodeChanged={(data)=>{
           //   setIsVisible(true);
 
           //   setTimeout(() => {
           //     setIsVisible(false);
           //     navigation.navigate("MainDrawer");
           //   }, 2000);
-          //   console.log(`Code is ${code}, you are good to go!`);
           // }}
+          codeInputFieldStyle={styles.underlineStyleBase}
+          onCodeFilled={(code) => {
+            // setIsVisible(true);
+            navigation.navigate("MainDrawer");
+
+
+            // setTimeout(() => {
+            //   setIsVisible(false);
+            //   navigation.navigate("MainDrawer");
+            // }, 2000);
+            console.log(`Code is ${code}, you are good to go!`);
+          }}
         />
       </View>
       <PercentageSpacer height={"20%"} />
