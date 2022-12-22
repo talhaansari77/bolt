@@ -79,7 +79,7 @@ const CustomTextInput = ({
               fontSize: verticalScale(13),
             },
           ]}
-          onPressIn={()=>console.log("HJjhjj")}
+          // onPressIn={()=>console.log("HJjhjj")}
           editable={props.editable}
           onChangeText={props.onChangeText}
           value={props.value}

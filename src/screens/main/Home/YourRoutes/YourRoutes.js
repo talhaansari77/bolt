@@ -67,7 +67,7 @@ const YourRoutes = ({ navigation }) => {
             <>
               <View style={{ flexDirection: "row", alignItems: "center" }}>
                 <CustomTextInput
-                  onPressIn={() => setCheck(item.id)}
+                  onPress={() => setCheck(item.id)}
                   leftIcon={item.id == check ? icons.yourdes : null}
                   placeholder={item.placeholder}
                   borderWidth={item.id == check ? 2 : null}

@@ -1,4 +1,4 @@
-import { SafeAreaView, StyleSheet, Text, View } from 'react-native'
+import { Platform, SafeAreaView, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import TopHeader from '../../../components/TopHeader'
 import commonStyles from '../../../utils/CommonStyles'
@@ -7,6 +7,7 @@ import CustomText from '../../../components/CustomText'
 import { Spacer } from '../../../components/Spacer'
 import AboutContainer from './Molecules/AboutContainer'
 import icons from '../../../../assets/Icons'
+import PercentageSpacer from '../../../components/PercentageSpacer'
 
 
 
@@ -25,6 +26,8 @@ const AboutScreen = ({navigation}) => {
   return (
     <SafeAreaView style={{flex:1,backgroundColor:colors.white}}>
         <View style={commonStyles.container}>
+        <PercentageSpacer height={Platform.OS=="android"?"5%":0}/>
+
         <TopHeader label="About" navigation={navigation}/>
         <Spacer height={10}/>
         <CustomText
