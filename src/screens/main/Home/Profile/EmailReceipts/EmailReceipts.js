@@ -15,7 +15,7 @@ const EmailReceipts = () => {
     const navigation = useNavigation()
   return (
     <SafeAreaView>
-    <PercentageSpacer height={Platform.OS=="android"?"5%":0}/>
+    {/* <PercentageSpacer height={Platform.OS=="android"?"5%":0}/> */}
       <ReceipteHeader navigation={navigation} />
       <Spacer height={25} />
       <View style={{ width: "auto", paddingHorizontal: 22 }}>

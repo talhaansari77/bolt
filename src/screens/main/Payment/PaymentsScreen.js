@@ -20,7 +20,7 @@ const PaymentsScreen = ({ navigation }) => {
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: colors.white }}>
       <View style={commonStyles.container}>
-      <PercentageSpacer height={Platform.OS=="android"?"5%":0}/>
+      {/* <PercentageSpacer height={Platform.OS=="android"?"5%":0}/> */}
 
         <TopHeader label="Payment" navigation={navigation} />
         <Spacer height={20} />

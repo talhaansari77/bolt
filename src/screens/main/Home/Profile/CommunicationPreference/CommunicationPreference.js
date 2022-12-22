@@ -46,7 +46,7 @@ const CommunicationPreference = () => {
   return (
     <SafeAreaView style={commonStyles.container1}>
       <View style={commonStyles.container}>
-        <PercentageSpacer height={Platform.OS == "android" ? "5%" : 0} />
+        {/* <PercentageSpacer height={Platform.OS == "android" ? "5%" : 0} /> */}
 
         <TopHeader
           label={"Communication preferences"}

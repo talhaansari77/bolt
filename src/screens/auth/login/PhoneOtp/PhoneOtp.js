@@ -12,7 +12,7 @@ const PhoneOtp = ({ navigation }) => {
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: colors.white }}>
       <View style={commonStyles.container}>
-      <PercentageSpacer height={Platform.OS=="android"?"5%":0}/>
+      {/* <PercentageSpacer height={Platform.OS=="android"?"5%":0}/> */}
 
         <PhoneNuHeader  navigation={navigation} label="Enter code" />
         <Spacer height={20}/>

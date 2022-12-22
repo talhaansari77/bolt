@@ -33,7 +33,7 @@ const PhoneNumber = ({ navigation }) => {
     <ScrollView keyboardDismissMode="interactive" contentContainerStyle={styles.LoginBackground}>
 
     <SafeAreaView style={{ flex: 1, backgroundColor: colors.white }}>
-      <PercentageSpacer height={Platform.OS=="android"?"5%":0}/>
+      {/* <PercentageSpacer height={Platform.OS=="android"?"5%":0}/> */}
       <View style={commonStyles.container}>
         <PhoneNuHeader navigation={navigation}
         label="Enter your number"
