@@ -56,7 +56,8 @@ const BottomPromoCode = () => {
             <View style={{  width:"auto", paddingHorizontal:10}}>
               <CustomText label="Don't have a code yet?" fontFamily={"bold"} fontSize={11} />
               <Spacer height={2} />
-              <CustomText label="Get free rides" fontSize={11} />
+              <CustomText 
+              label="Get free rides" fontSize={11} />
             </View>
           </View>
         </View>

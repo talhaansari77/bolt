@@ -31,10 +31,14 @@ const CustomTextInput = ({
   withLabel,
   inputTextColor,
   fontFamily,
+  leftIcon,
+  rightIcon,
+  tintColor,
+  onRight,
   ...props
 }) => {
   return (
-    <View>
+    <View style={{ width: props.mainWidth,marginTop:props.mainTop }}>
     
       <TouchableOpacity
         onPress={props.onPress}
@@ -47,25 +51,34 @@ const CustomTextInput = ({
             backgroundColor: props.backgroundColor,
             marginTop: props.marginTop || verticalScale(0),
             borderColor: props.borderColor ,
+            borderWidth:props.borderWidth,
             alignItems: "center",
+            flexDirection:"row",
             paddingLeft: props.paddingLeft,
           },
         ]}
       >
+           {
+            leftIcon?(
+              <Image source={leftIcon} style={{width:18,height:18, }}/>
+
+            ): <></>
+          }
   
         <TextInput
           style={[
             {
-              width:  password || eyeClick||props.mic || props.downArrow? props.inputWidth  : "95%",
+              width:  rightIcon?"78%" : "95%",
               height: props.inputHeight || "100%",
               marginLeft: props.inputLeftMargin || 10,
               paddingRight: props.paddingRight || 10,
               paddingHorizontal: props.paddingHorizontal,
-              fontFamily: fontFamily || "bold",
-              color: inputTextColor || colors.white,
+              fontFamily: fontFamily || "regular",
+              color: inputTextColor || colors.black,
               fontSize: verticalScale(13),
             },
           ]}
+          editable={props.editable}
           onChangeText={props.onChangeText}
           value={props.value}
           numberOfLines={props.numberOfLines}
@@ -75,6 +88,20 @@ const CustomTextInput = ({
           placeholderTextColor={props.placeholderTextColor}
           secureTextEntry={props.secureTextEntry}
         />
+
+{
+            rightIcon?(
+              <TouchableOpacity 
+              activeOpacity={0.6}
+              onPress={onRight}
+              >
+                              <Image source={rightIcon} style={{width:30,height:30,marginRight:5}}/>
+
+                
+              </TouchableOpacity>
+
+            ): <></>
+          }
       
 
         

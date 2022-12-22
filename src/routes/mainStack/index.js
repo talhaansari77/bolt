@@ -13,6 +13,9 @@ import ProfileScreen from '../../screens/main/Home/Profile/ProfileScreen'
 import EditProfile from '../../screens/main/Home/Profile/EditProfile/EditProfile'
 import PromoCode from '../../screens/main/Promotions/PromoCode/PromoCode'
 import EmailReceipts from '../../screens/main/Home/Profile/EmailReceipts/EmailReceipts'
+import SearchLocation from '../../screens/main/Home/Profile/SearchLocation/SearchLocation'
+import CommunicationPreference from '../../screens/main/Home/Profile/CommunicationPreference/CommunicationPreference'
+import YourRoutes from '../../screens/main/Home/YourRoutes/YourRoutes'
 
 
 const Stack=createStackNavigator()
@@ -21,15 +24,23 @@ const MainStack = () => {
   return (
       <Stack.Navigator
       screenOptions={{headerShown:false}}
+      initialRouteName="Home"
       >
-          {/* <Stack.Screen name="Home" component={Home}/> */}
         <Stack.Screen name="EmailReceipts" component={EmailReceipts}/> 
         <Stack.Screen name="MainDrawer" component={MainDrawer}/> 
         <Stack.Screen name="Profile" component={ProfileScreen}/> 
         <Stack.Screen name="EditProfile" component={EditProfile}/> 
         <Stack.Screen name="PromoCode" component={PromoCode}/> 
+        <Stack.Screen name="SearchLocation" component={SearchLocation}/> 
+        <Stack.Screen name="Home" component={Home}/>
+        <Stack.Screen name="CommunicationPreference" component={CommunicationPreference}/>
+        <Stack.Screen name="YourRoutes" component={YourRoutes}/>
 
 
+
+
+
+        
 
 
            {/* <Stack.Screen name="Payment" component={PaymentsScreen}/>

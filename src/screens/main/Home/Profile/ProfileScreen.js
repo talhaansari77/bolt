@@ -19,10 +19,10 @@ const ProfileScreen = ({navigation}) => {
       <TopProfileContainer/>
 
       <Spacer height={20} />
-      <FavouriteContainer/>
+      <FavouriteContainer navigation={navigation}/>
       <Spacer height={20} />
 
-      <ProfileBottom/>
+      <ProfileBottom navigation={navigation}/>
 
     </View>
   </SafeAreaView>

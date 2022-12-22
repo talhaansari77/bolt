@@ -1,13 +1,21 @@
 import { StyleSheet, Text, View, TouchableOpacity, Image } from "react-native";
 import React from "react";
 import CustomText from "./CustomText";
-import { moderateScale } from "react-native-size-matters";
+import { moderateScale, scale } from "react-native-size-matters";
 import { MaterialIcons } from "@expo/vector-icons";
 import commonStyles from "../utils/CommonStyles";
 import icons from "../../assets/Icons";
 import { colors } from "../utils/Colors";
+import { Feather } from "@expo/vector-icons";
 
-const ProfileHeader = ({ label, navigation ,onEdit,edit}) => {
+const ProfileHeader = ({
+  label,
+  navigation,
+  onEdit,
+  edit,
+  leftIcon,
+  onAdd,
+}) => {
   return (
     <View
       style={{
@@ -21,11 +29,18 @@ const ProfileHeader = ({ label, navigation ,onEdit,edit}) => {
           activeOpacity={0.6}
           onPress={() => navigation.goBack()}
         >
-          <MaterialIcons
-            name="arrow-back"
-            size={moderateScale(25)}
-            color="black"
-          />
+          {leftIcon ? (
+            <Image
+              source={leftIcon}
+              style={{ width: 15, height: 15, tintColor: colors.black }}
+            />
+          ) : (
+            <MaterialIcons
+              name="arrow-back"
+              size={moderateScale(25)}
+              color="black"
+            />
+          )}
         </TouchableOpacity>
         <CustomText
           label={label}
@@ -36,25 +51,25 @@ const ProfileHeader = ({ label, navigation ,onEdit,edit}) => {
         />
       </View>
 
-      {
-          edit?(
-            <TouchableOpacity 
-            activeOpacity={0.6}
-            onPress={onEdit}
-            style={commonStyles.imgContainer}>
-              <Image
-                resizeMode="contain"
-                style={{
-                  ...commonStyles.img,
-                }}
-                source={icons.edit}
-              />
-            </TouchableOpacity>
-          ):null
-      }
-
-
-
+      {edit ? (
+        <TouchableOpacity
+          activeOpacity={0.6}
+          onPress={onEdit}
+          style={commonStyles.imgContainer}
+        >
+          <Image
+            resizeMode="contain"
+            style={{
+              ...commonStyles.img,
+            }}
+            source={icons.edit}
+          />
+        </TouchableOpacity>
+      ) : (
+        <TouchableOpacity activeOpacity={0.6} onPress={onAdd}>
+          <Feather name="plus" size={moderateScale(25)} color="black" />
+        </TouchableOpacity>
+      )}
     </View>
   );
 };

@@ -6,6 +6,7 @@ import CustomInputWithLabel from "../../../../components/CustomInputWithLabel";
 import { colors } from "../../../../utils/Colors";
 import CustomText from "../../../../components/CustomText";
 import BottomPromoCode from "./Molecules/BottomPromoCode";
+import PercentageSpacer from "../../../../components/PercentageSpacer";
 
 const PromoCode = ({ navigation }) => {
   return (
@@ -38,15 +39,10 @@ const PromoCode = ({ navigation }) => {
           color={colors.lightBlack}
         />
       </View>
-      <View
-        style={{
-          display: "flex",
-          justifyContent: "flex-end",
-          height: Platform.OS == "ios" ? 620 : 600,
-        }}
-      >
-        <BottomPromoCode />
-      </View>
+      <PercentageSpacer height={"58%"}/>
+      <BottomPromoCode />
+
+     
     </SafeAreaView>
   );
 };

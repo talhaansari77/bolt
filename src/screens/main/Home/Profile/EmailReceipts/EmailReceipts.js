@@ -7,16 +7,17 @@ import { colors } from "../../../../../utils/Colors";
 import CustomTextInput from "../../../../../components/CustomTextInput";
 import ReceipteHeader from "./Molecules/ReceipteHeader";
 import ReceipteFooter from "./Molecules/ReceipteFooter";
+import PercentageSpacer from "../../../../../components/PercentageSpacer";
 
 const EmailReceipts = ({ navigation }) => {
   return (
     <SafeAreaView>
       <Spacer height={Platform.OS == "ios" ? 8 : 30} />
       <ReceipteHeader navigation={navigation} />
-      <Spacer height={14} />
+      <Spacer height={25} />
       <View style={{ width: "auto", paddingHorizontal: 22 }}>
         <CustomText label="Email for receipts" fontFamily="bold" fontSize={20} />
-        <Spacer height={12} />
+        <Spacer height={25} />
         <CustomTextInput
           width={"100%"}
           height={60}
@@ -30,19 +31,15 @@ const EmailReceipts = ({ navigation }) => {
         <Spacer height={12} />
         <CustomText
           fontSize={12}
+          marginTop={5}
           label="We'll send an email to verify your address."
           color={colors.lightBlack}
         />
       </View>
-      <View
-        style={{
-          display: "flex",
-          justifyContent: "flex-end",
-          height: Platform.OS == "ios" ? 630 : 600,
-        }}
-      >
-        <ReceipteFooter />
-      </View>
+      <PercentageSpacer height={"60%"}/>
+      <ReceipteFooter />
+
+     
     </SafeAreaView>
   );
 };

@@ -22,6 +22,14 @@ const icons = {
   logout:require("./logout.png"),
   facebookwhite:require("./facebookwhite.png"),
   car:require("./car.png"),
+  cross:require("./cross.png"),
+  search:require("./search.png"),
+  map:require("./map.png"),
+  yourdes:require("./yourdes.png"),
+
+
+
+
 
 
 

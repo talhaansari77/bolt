@@ -26,6 +26,7 @@ const LoginMainContainer = ({navigation}) => {
       <PhoneInput
         defaultValue={countryCode}
         defaultCode="PK"
+      
         
         onChangeFormattedText={(text) => {
           setCountryCode(text);

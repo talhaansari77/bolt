@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import MapView from "react-native-maps";
 import LocationModal from "./Molecules/LocationModal";
 import DrawerContainer from "./Molecules/DrawerContainer";
+import WhereSearch from "./Molecules/WhereSearch";
 
 const Home = ({ navigation }) => {
   const [isVisible, setIsVisible] = useState(true);
@@ -20,6 +21,7 @@ const Home = ({ navigation }) => {
 
       <LocationModal isVisible={isVisible} setIsVisible={setIsVisible} />
       <DrawerContainer navigation={navigation} />
+      <WhereSearch navigation={navigation}/>
     </View>
   );
 };

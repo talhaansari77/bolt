@@ -21,6 +21,7 @@ const TopHeader = ({label,navigation}) => {
         label={label}
         fontFamily={"bold"}
         fontSize={18}
+        marginLeft={10}
       />
 
     </View>
