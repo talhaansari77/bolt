@@ -1,4 +1,4 @@
-import { SafeAreaView, StyleSheet, Text, View } from "react-native";
+import { Platform, SafeAreaView, StyleSheet, Text, View } from "react-native";
 import React from "react";
 import { colors } from "../../../utils/Colors";
 import TopHeader from "../../../components/TopHeader";
@@ -13,6 +13,8 @@ const PromotionsScreen = ({ navigation }) => {
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: colors.white }}>
       <View style={commonStyles.container}>
+      <PercentageSpacer height={Platform.OS=="android"?"5%":0}/>
+
         <TopHeader label="Promotions" navigation={navigation} />
         <Spacer height={10} />
 

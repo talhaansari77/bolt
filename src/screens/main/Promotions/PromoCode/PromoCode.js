@@ -11,7 +11,7 @@ import PercentageSpacer from "../../../../components/PercentageSpacer";
 const PromoCode = ({ navigation }) => {
   return (
     <SafeAreaView>
-      <Spacer height={Platform.OS == "ios" ? 8 : 30} />
+    <PercentageSpacer height={Platform.OS=="android"?"5%":0}/>
       <PromoHeader navigation={navigation} />
       <Spacer height={12} />
       <View style={{ width: "auto", paddingHorizontal: 22 }}>

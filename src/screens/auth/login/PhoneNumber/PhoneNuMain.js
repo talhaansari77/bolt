@@ -7,14 +7,21 @@ import CustomText from '../../../../components/CustomText';
 import { Spacer } from '../../../../components/Spacer';
 
 
-const PhoneNuMain = () => {
+const PhoneNuMain = ({phoneNumber,setPhoneNumber}) => {
+
 
     const [countryCode, setCountryCode] = useState("")
+
+
   return (
     <View>
         <PhoneInput
         defaultValue={countryCode}
         defaultCode="PK"
+
+        onChangeText={(text) => {
+          setPhoneNumber(text);
+        }} 
         
         onChangeFormattedText={(text) => {
           setCountryCode(text);

@@ -48,7 +48,7 @@ const OtpMainContainer = ({ navigation }) => {
 
             setTimeout(() => {
               setIsVisible(false);
-              navigation.navigate("MainStack");
+              navigation.navigate("MainDrawer");
             }, 2000);
             console.log(`Code is ${code}, you are good to go!`);
           }}
@@ -86,7 +86,7 @@ const styles = StyleSheet.create({
     borderWidth: 0,
     borderRadius: scale(5),
     backgroundColor: colors.lightGray,
-    color:colors.black
+    color: colors.black,
   },
   highLighted: {
     borderColor: colors.primary,

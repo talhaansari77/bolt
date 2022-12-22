@@ -30,6 +30,7 @@ const icons = {
 
 
 
+  chat:require("./chat.png"),
 
 
 

@@ -5,6 +5,7 @@ import {
   SafeAreaView,
   TouchableOpacity,
   Image,
+  Platform,
 } from "react-native";
 import React, { useState, useEffect } from "react";
 import { colors } from "../../../../utils/Colors";
@@ -14,6 +15,7 @@ import CustomTextInput from "../../../../components/CustomTextInput";
 import commonStyles from "../../../../utils/CommonStyles";
 import ProfileHeader from "../../../../components/ProfileHeader";
 import { verticalScale } from "react-native-size-matters";
+import PercentageSpacer from "../../../../components/PercentageSpacer";
 
 const YourRoutes = ({ navigation }) => {
   const [check, setCheck] = useState(false);
@@ -31,18 +33,14 @@ const YourRoutes = ({ navigation }) => {
     setCounter(counter + 1);
 
     console.log("dataLenght", routsData.length);
-    if (routsData.length > 3){
-
+    if (routsData.length > 3) {
+    } else {
+      routsData.push({
+        id: 2 + 1,
+        placeholder: "Add shop",
+        cross: icons.cross,
+      });
     }
-    else{
-        routsData.push({
-            id: 2 + 1,
-            placeholder: "Add shop",
-            cross: icons.cross,
-          });
-
-    }
-     
   };
 
   const OnRemoveDestination = () => {
@@ -53,10 +51,14 @@ const YourRoutes = ({ navigation }) => {
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: colors.white }}>
       <View style={commonStyles.container}>
+      <PercentageSpacer height={Platform.OS=="android"?"5%":0}/>
+
         <ProfileHeader
           label={"Home"}
           leftIcon={icons.cross}
           onAdd={OnAddDestination}
+          navigation={navigation}
+          addIcon
         />
         <Spacer height={20} />
 
@@ -65,7 +67,7 @@ const YourRoutes = ({ navigation }) => {
             <>
               <View style={{ flexDirection: "row", alignItems: "center" }}>
                 <CustomTextInput
-                  onPress={() => setCheck(item.id)}
+                  onPressIn={() => setCheck(item.id)}
                   leftIcon={item.id == check ? icons.yourdes : null}
                   placeholder={item.placeholder}
                   borderWidth={item.id == check ? 2 : null}

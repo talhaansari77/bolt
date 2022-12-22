@@ -13,6 +13,8 @@ import MyRidesScreen from "../../screens/main/MyRides/MyRidesScreen";
 import { moderateScale, scale, verticalScale } from "react-native-size-matters";
 import icons from "../../../assets/Icons";
 import Home from "../../screens/main/Home/Home";
+import PromotionStack from "../mainStack/PromotionStack/PromotionStack";
+import SupportStack from "../mainStack/SupportStack/SupportStack";
 
 const Drawer = createDrawerNavigator();
 
@@ -80,7 +82,7 @@ const MainDrawer = () => {
           ),
         }}
         name="Promotions"
-        component={PromotionsScreen}
+        component={PromotionStack}
       />
       <Drawer.Screen
         options={{
@@ -114,7 +116,7 @@ const MainDrawer = () => {
           ),
         }}
         name="Supports"
-        component={SupportsScreen}
+        component={SupportStack}
       />
       <Drawer.Screen
         options={{

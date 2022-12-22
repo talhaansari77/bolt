@@ -1,10 +1,11 @@
-import { StyleSheet, Text, View,SafeAreaView } from 'react-native'
+import { StyleSheet, Text, View,SafeAreaView, Platform } from 'react-native'
 import React from 'react'
 import commonStyles from '../../../../../utils/CommonStyles'
 import { Spacer } from '../../../../../components/Spacer'
 import ProfileHeader from '../../../../../components/ProfileHeader'
 import TopHeader from '../../../../../components/TopHeader'
 import PreferenceContainer from './Molecules/PreferenceContainer'
+import PercentageSpacer from '../../../../../components/PercentageSpacer'
 
 const CommunicationPreference = ({navigation}) => {
     const  prefData=[
@@ -16,6 +17,8 @@ const CommunicationPreference = ({navigation}) => {
   return (
     <SafeAreaView style={commonStyles.container1}>
     <View style={commonStyles.container}>
+    <PercentageSpacer height={Platform.OS=="android"?"5%":0}/>
+
         <TopHeader label={"Communication preferences"}
         navigation={navigation}
         />

@@ -8,11 +8,14 @@ import CustomTextInput from "../../../../../components/CustomTextInput";
 import ReceipteHeader from "./Molecules/ReceipteHeader";
 import ReceipteFooter from "./Molecules/ReceipteFooter";
 import PercentageSpacer from "../../../../../components/PercentageSpacer";
+import { useNavigation } from "@react-navigation/native";
 
-const EmailReceipts = ({ navigation }) => {
+
+const EmailReceipts = () => {
+    const navigation = useNavigation()
   return (
     <SafeAreaView>
-      <Spacer height={Platform.OS == "ios" ? 8 : 30} />
+    <PercentageSpacer height={Platform.OS=="android"?"5%":0}/>
       <ReceipteHeader navigation={navigation} />
       <Spacer height={25} />
       <View style={{ width: "auto", paddingHorizontal: 22 }}>

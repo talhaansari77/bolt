@@ -15,6 +15,7 @@ const ProfileHeader = ({
   edit,
   leftIcon,
   onAdd,
+  addIcon,
 }) => {
   return (
     <View
@@ -66,9 +67,13 @@ const ProfileHeader = ({
           />
         </TouchableOpacity>
       ) : (
-        <TouchableOpacity activeOpacity={0.6} onPress={onAdd}>
+        addIcon?(
+          <TouchableOpacity activeOpacity={0.6} onPress={onAdd}>
           <Feather name="plus" size={moderateScale(25)} color="black" />
         </TouchableOpacity>
+
+        ):<></>
+      
       )}
     </View>
   );

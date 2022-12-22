@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View } from "react-native";
 import React from "react";
-import { scale, verticalScale } from "react-native-size-matters";
+import { scale, ScaledSheet, verticalScale } from "react-native-size-matters";
 import CustomText from "../../../../components/CustomText";
 import { colors } from "../../../../utils/Colors";
 
@@ -31,7 +31,7 @@ const BoltBalanceContainer = () => {
 
 export default BoltBalanceContainer;
 
-const styles = StyleSheet.create({
+const styles = ScaledSheet.create({
   balanceContainer: {
     width: "100%",
     height: verticalScale(70),

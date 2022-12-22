@@ -12,6 +12,8 @@ import PercentageSpacer from "../../../../components/PercentageSpacer";
 
 const LoginMainContainer = ({navigation}) => {
   const [countryCode, setCountryCode] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("")
+
 
   return (
     <>
@@ -26,9 +28,11 @@ const LoginMainContainer = ({navigation}) => {
       <PhoneInput
         defaultValue={countryCode}
         defaultCode="PK"
-      
-        
-        onChangeFormattedText={(text) => {
+        value={countryCode}
+        onChangeText={(text) => {
+          setPhoneNumber(text);
+        }}      
+          onChangeFormattedText={(text) => {
           setCountryCode(text);
           navigation.navigate("PhoneNumber")     
            }}

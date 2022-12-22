@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View,SafeAreaView } from 'react-native'
+import { StyleSheet, Text, View,SafeAreaView, Platform } from 'react-native'
 import React from 'react'
 import CustomInputWithLabel from '../../../../../components/CustomInputWithLabel'
 import { colors } from '../../../../../utils/Colors'
@@ -9,11 +9,14 @@ import ProfileHeader from '../../../../../components/ProfileHeader'
 import ProfileImg from '../../../../../components/ProfileImg'
 import EditInputContainer from './Molecules/EditInputContainer'
 import EditBottomContainer from './Molecules/EditBottomContainer'
+import PercentageSpacer from '../../../../../components/PercentageSpacer'
 
 const EditProfile = ({navigation}) => {
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: colors.white }}>
       <View style={commonStyles.container}>
+      <PercentageSpacer height={Platform.OS=="android"?"5%":0}/>
+
         <ProfileHeader label="Edit Profile" navigation={navigation} />
         <Spacer height={40} />
         <ProfileImg edit alignSelf="center"/>

@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, Modal } from "react-native";
+import { StyleSheet, Text, View, Modal,ActivityIndicator } from "react-native";
 import React from "react";
 import CustomModal from "../../../../components/CustomModal";
 import { colors } from "../../../../utils/Colors";
@@ -6,24 +6,28 @@ import { verticalScale } from "react-native-size-matters";
 import Lottie from "lottie-react-native";
 import { Spacer } from "../../../../components/Spacer";
 import CustomText from "../../../../components/CustomText";
+import PercentageSpacer from "../../../../components/PercentageSpacer";
 
 const OtpLoadingModal = ({ isVisible, setIsVisible }) => {
   return (
     <CustomModal
       isVisible={isVisible}
       onDisable={() => setIsVisible(!isVisible)}
-      height={verticalScale(150)}
+      height={verticalScale(100)}
       width={"80%"}
       borderRadius={10}
     >
-      <Spacer height={10} />
+      <PercentageSpacer height={"20%"}/>
+      <ActivityIndicator size={"large"} color={colors.primary}/>
 
-      <Lottie
+      {/* <Lottie
         style={{ height: 100, alignSelf: "center" }}
         // source={require("../../../../../assets/Loader/apploading.json")}
         autoPlay
         // speed={1.5}
-      />
+      /> */}
+            <Spacer height={20} />
+
       <CustomText
         label="Verifying code..."
         fontFamily={"regular"}

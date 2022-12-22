@@ -74,7 +74,7 @@ const ProfileBottom = ({ navigation }) => {
             source={icons.logout}
           />
         </View>
-        <CountryPicker
+        {/* <CountryPicker
 				disable={false}
 				animationType={"slide"}
 				language="en"
@@ -92,7 +92,7 @@ const ProfileBottom = ({ navigation }) => {
 				searchButtonImage={icons.search}
 				countryCode={"1"}
 				selectedValue={selectedValue}
-			/>
+			/> */}
 
         <CustomText
           label={"Log out"}

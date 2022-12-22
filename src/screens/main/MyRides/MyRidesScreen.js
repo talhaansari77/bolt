@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View ,SafeAreaView} from 'react-native'
+import { StyleSheet, Text, View ,SafeAreaView, Platform} from 'react-native'
 import React from 'react'
 import { Spacer } from '../../../components/Spacer'
 import TopHeader from '../../../components/TopHeader'
@@ -11,6 +11,8 @@ const MyRidesScreen = ({navigation}) => {
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: colors.white }}>
     <View style={commonStyles.container}>
+    <PercentageSpacer height={Platform.OS=="android"?"5%":0}/>
+
       <TopHeader label="My Rides" navigation={navigation} />
       {/* <Spacer height={10} /> */}
       <PercentageSpacer height={"40%"}/>
